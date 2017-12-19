@@ -6,8 +6,8 @@ if (isset($_GET['c']) && isset($_GET['f'])) {
     $controller = $_GET['c'];
     $action = $_GET['f'];
 } else {
-    $controller = 'controlHalaman';
-    $action = 'home';
+    $controller = 'ControlHalaman';
+    $action = 'beranda';
 }
-require_once('main/layout_all.php');
+require_once ('route.php');
 ?>

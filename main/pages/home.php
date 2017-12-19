@@ -19,8 +19,8 @@
             <ul class="right">
                 <li><a href="#fitur">Apa Itu XBM?</a></li>
                 <li><a href="#tentang-kami">Tentang Kami</a></li>
-                <li><a href="index.php?c=controlHalaman&f=halaman_daftar">Daftar</a></li>
-                <li><a href="index.php?c=controlHalaman&f=halaman_masuk">Masuk</a></li>
+                <li><a href="index.php?c=ControlHalaman&f=halaman_daftar">Daftar</a></li>
+                <li><a href="index.php?c=ControlHalaman&f=halaman_masuk">Masuk</a></li>
             </ul>
         </div>
     </nav>
@@ -35,8 +35,8 @@
         </li>
         <li><a href="#fitur">Apa Itu XBM?</a></li>
         <li><a href="#tentang-kami">Tentang Kami</a></li>
-        <li><a href="index.php?c=controlHalaman&f=halaman_daftar">Daftar</a></li>
-        <li><a href="index.php?c=controlHalaman&f=halaman_masuk">Masuk</a></li>
+        <li><a href="index.php?c=ControlHalaman&f=halaman_daftar">Daftar</a></li>
+        <li><a href="index.php?c=ControlHalaman&f=halaman_masuk">Masuk</a></li>
     </ul>
 </aside>
 

@@ -24,7 +24,7 @@
     <div class="card col m4 s12 offset-m4 daftar-box">
         <form action="index.php?c=controlPengguna&f=daftarTipe" method="post">
             <div class="card-content">
-                <span class="card-title"><a href="daftar.php"><i class="material-icons"></i></a>Kategori Bisnis</span>
+                <span class="card-title"><button type="button"><i class="material-icons">arrow_back</i></button>Kategori Bisnis</span>
                 <div class="input-field">
                     <select name="Tipe" id="Pengelola">
                         <option value="none" disabled selected>Pilih Kategori</option>
@@ -39,7 +39,6 @@
 
                     </div>
                     <div class="col s6">
-<!--                        <a href="daftar-3.php" class="btn cyan waves-effect right">Selanjutnya</a>-->
                         <button type="submit" class="btn cyan waves-effect right">Daftar</button>
                     </div>
                 </div>

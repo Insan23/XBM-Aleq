@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Daftar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/material-icons.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/material-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/materialize.min.css" media="screen,projection">
     <link rel="stylesheet" href="assets/css-modified/style.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
@@ -20,23 +20,98 @@
     </div>
 </nav>
 
-<div class="row">
-    <div class="card col m4 s12 offset-m4 daftar-box">
+<div class="row container">
+    <div class="card col s12 daftar-box">
         <form action="" method="post">
             <div class="card-content">
-                <span class="card-title"><a href="daftar.php"><i class="material-icons">keyboard_arrow_left</i></a>Kategori Bisnis</span>
-                <div class="input-field">
-                    <select name="Pengelola" id="Pengelola">
-                        <option value="none" disabled selected>Pilih Kategori</option>
-                        <option value="Individu">Individu</option>
-                        <option value="Kelompok">Berkelompok</option>
-                    </select>
+                <span class="card-title"><a role="button"><i class="material-icons">keyboard_arrow_left</i></a>Daftarkan Pegawai Anda</span>
+                <div class="row">
+                    <div class="col s4">
+                        <h5>Pengelola Transaksi</h5>
+                        <div class="input-field">
+                            <label for="Nama">Nama</label>
+                            <input type="text" id="NamaPemilik" name="NamaPemilik">
+                        </div>
+                        <div class="input-field">
+                            <label for="Alamat">Alamat</label>
+                            <input type="text" id="Alamat" name="Alamat">
+                        </div>
+                        <div class="input-field">
+                            <label for="TempatLahir">Tempat Lahir</label>
+                            <input type="text" id="TempatLahir" name="TempatLahir">
+                        </div>
+                        <div class="input-field">
+                            <label for="TanggalLahir" class="active">Tanggal Lahir</label>
+                            <input type="date" id="TanggalLahir" name="TanggalLahir">
+                        </div>
+                        <div class="input-field">
+                            <label for="Email">Email</label>
+                            <input type="email" id="Email" name="Email">
+                        </div>
+                        <div class="input-field">
+                            <label for="Password">Kata Sandi</label>
+                            <input type="text" id="Password" name="Password">
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <h5>Pengelola Gudang</h5>
+                        <div class="input-field">
+                            <label for="Nama">Nama</label>
+                            <input type="text" id="NamaPemilik" name="NamaPemilik">
+                        </div>
+                        <div class="input-field">
+                            <label for="Alamat">Alamat</label>
+                            <input type="text" id="Alamat" name="Alamat">
+                        </div>
+                        <div class="input-field">
+                            <label for="TempatLahir">Tempat Lahir</label>
+                            <input type="text" id="TempatLahir" name="TempatLahir">
+                        </div>
+                        <div class="input-field">
+                            <label for="TanggalLahir" class="active">Tanggal Lahir</label>
+                            <input type="date" id="TanggalLahir" name="TanggalLahir">
+                        </div>
+                        <div class="input-field">
+                            <label for="Email">Email</label>
+                            <input type="email" id="Email" name="Email">
+                        </div>
+                        <div class="input-field">
+                            <label for="Password">Kata Sandi</label>
+                            <input type="text" id="Password" name="Password">
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <h5>Pengelola Keuangan</h5>
+                        <div class="input-field">
+                            <label for="Nama">Nama</label>
+                            <input type="text" id="NamaPemilik" name="NamaPemilik">
+                        </div>
+                        <div class="input-field">
+                            <label for="Alamat">Alamat</label>
+                            <input type="text" id="Alamat" name="Alamat">
+                        </div>
+                        <div class="input-field">
+                            <label for="TempatLahir">Tempat Lahir</label>
+                            <input type="text" id="TempatLahir" name="TempatLahir">
+                        </div>
+                        <div class="input-field">
+                            <label for="TanggalLahir" class="active">Tanggal Lahir</label>
+                            <input type="date" id="TanggalLahir" name="TanggalLahir">
+                        </div>
+                        <div class="input-field">
+                            <label for="Email">Email</label>
+                            <input type="email" id="Email" name="Email">
+                        </div>
+                        <div class="input-field">
+                            <label for="Password">Kata Sandi</label>
+                            <input type="text" id="Password" name="Password">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card-action">
                 <div class="row">
                     <div class="col s6">
-
                     </div>
                     <div class="col s6">
                         <a href="daftar-3.php" class="btn cyan waves-effect right">Selanjutnya</a>
@@ -56,7 +131,7 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script>
 <script type="text/javascript">
     var element = document.querySelector('select');
