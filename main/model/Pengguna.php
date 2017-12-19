@@ -37,19 +37,28 @@ class Pengguna
     public static function login($Username, $Password)
     {
         $db = DB::getInstance();
-        $result = $db->query("SELECT p.IDUsaha, pp.IDPegawai, pp.Nama, p.Tingkatan  FROM pengguna p JOIN profil_pegawai pp ON p.IDPengguna = pp.IDPengguna WHERE p.NamaPengguna = '$Username' AND p.KataSandi = '$Password';");
-        if (count($result) == 1) {
-            foreach ($result as $item) {
-                $output = array(
-                    'IDUsaha' => $item['IDUsaha'],
-                    'IDPegawai' => $item['IDPegawai'],
-                    'Nama' => $item['Nama'],
-                    'Tingkatan' => $item['Tingkatan']
-                );
+        if ($Username == 'admin@xbm.com') {
+            $result = $db->query("SELECT *  FROM pengguna WHERE NamaPengguna = '$Username' AND KataSandi = '$Password';");
+            if (count($result) == 1) {
+                return "Admin";
+            } else {
+                return null;
             }
-            return $output;
         } else {
-            return null;
+            $result = $db->query("SELECT p.IDUsaha, pp.IDPegawai, pp.Nama, p.Tingkatan  FROM pengguna p JOIN profil_pegawai pp ON p.IDPengguna = pp.IDPengguna WHERE p.NamaPengguna = '$Username' AND p.KataSandi = '$Password';");
+            if (count($result) == 1) {
+                foreach ($result as $item) {
+                    $output = array(
+                        'IDUsaha' => $item['IDUsaha'],
+                        'IDPegawai' => $item['IDPegawai'],
+                        'Nama' => $item['Nama'],
+                        'Tingkatan' => $item['Tingkatan']
+                    );
+                }
+                return $output;
+            } else {
+                return null;
+            }
         }
     }
 
@@ -68,7 +77,7 @@ class Pengguna
         }
     }
 
-    public function registerKelompok($Nama, $Alamat, $Email, $Email1, $Email2, $Email3, $Status, $NamaPemilik, $Nama1, $Nama2, $Nama3, $AlamatPemilik, $Alamat1, $Alamat2, $Alamat3, $TempatLahir, $TempatLahir1, $TempatLahir2, $TempatLahir3, $TanggalLahir, $TanggalLahir1, $TanggalLahir2, $TanggalLahir3, $Password, $Password1, $Password2, $Password3, $Tipe)
+    public static function registerKelompok($Nama, $Alamat, $Email, $Email1, $Email2, $Email3, $NamaPemilik, $Nama1, $Nama2, $Nama3, $AlamatPemilik, $Alamat1, $Alamat2, $Alamat3, $TempatLahir, $TempatLahir1, $TempatLahir2, $TempatLahir3, $TanggalLahir, $TanggalLahir1, $TanggalLahir2, $TanggalLahir3, $Password, $Password1, $Password2, $Password3, $Tipe)
     {
         $db = DB::getInstance();
         $db->exec("INSERT INTO profil_usaha(IDUsaha, NamaUsaha, Alamat, TanggalDaftar, Email, Status, Tipe) VALUES ( '', '$Nama', '$Alamat', NOW(), '$Email', 'Ada', '$Tipe');");

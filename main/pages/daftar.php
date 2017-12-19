@@ -21,62 +21,185 @@
 </nav>
 
 <div class="row">
-    <div class="card col m6 s12 offset-m3 daftar-box">
-        <form id="card">
-            <div class="card-content">
-                <span class="card-title">Daftarfkan Bisnis Anda</span>
-                <div class="row">
-                    <div class="col m6 s12">
-                        <div class="input-field">
-                            <label for="NamaUsaha" id="labelnamausaha">Nama Usaha</label>
-                            <input type="text" id="NamaUsaha" name="NamaUsaha" onchange="cekNamaBisnis(this.value)">
+    <div id="card-main" class="card col m6 s12 offset-m3 daftar-box">
+        <div id="card">
+            <div id="form1">
+                <div class="card-content">
+                    <span class="card-title">Daftarfkan Bisnis Anda</span>
+                    <div class="row">
+                        <div class="col m6 s12">
+                            <div class="input-field">
+                                <label for="NamaUsaha" id="labelnamausaha">Nama Usaha</label>
+                                <input type="text" id="NamaUsaha" name="NamaUsaha" onchange="cekNamaBisnis(this.value)">
+                            </div>
+                            <div class="input-field">
+                                <label for="AlamatUsaha">Alamat</label>
+                                <input type="text" id="AlamatUsaha" name="AlamatUsaha">
+                            </div>
                         </div>
-                        <div class="input-field">
-                            <label for="AlamatUsaha">Alamat</label>
-                            <input type="text" id="AlamatUsaha" name="AlamatUsaha">
+                        <div class="col m6 s12">
+                            <div class="input-field">
+                                <label for="NamaPemilik">Nama Pemilik</label>
+                                <input type="text" id="NamaPemilik" name="NamaPemilik">
+                            </div>
+                            <div class="input-field">
+                                <label for="AlamatPemilik">Alamat Pemilik</label>
+                                <input type="text" id="AlamatPemilik" name="AlamatPemilik">
+                            </div>
+                            <div class="input-field">
+                                <label for="TempatLahir">Tempat Lahir</label>
+                                <input type="text" id="TempatLahir" name="TempatLahir">
+                            </div>
+                            <div class="input-field">
+                                <label for="TanggalLahir" class="active">Tanggal Lahir</label>
+                                <input type="date" id="TanggalLahir" name="TanggalLahir">
+                            </div>
+                            <div class="input-field">
+                                <label for="Email">Email</label>
+                                <input type="email" id="Email" name="Email">
+                            </div>
+                            <div class="input-field">
+                                <label for="Password">Kata Sandi</label>
+                                <input type="text" id="Password" name="Password">
+                            </div>
                         </div>
                     </div>
-                    <div class="col m6 s12">
-                        <div class="input-field">
-                            <label for="NamaPemilik">Nama Pemilik</label>
-                            <input type="text" id="NamaPemilik" name="NamaPemilik">
+                </div>
+                <div class="card-action">
+                    <div class="row">
+                        <div class="col s6">
+                            Sudah Punya Akun? <a href="login.php" class="btn cyan">Masuk</a>
                         </div>
-                        <div class="input-field">
-                            <label for="AlamatPemilik">Alamat Pemilik</label>
-                            <input type="text" id="AlamatPemilik" name="AlamatPemilik">
-                        </div>
-                        <div class="input-field">
-                            <label for="TempatLahir">Tempat Lahir</label>
-                            <input type="text" id="TempatLahir" name="TempatLahir">
-                        </div>
-                        <div class="input-field">
-                            <label for="TanggalLahir" class="active">Tanggal Lahir</label>
-                            <input type="date" id="TanggalLahir" name="TanggalLahir">
-                        </div>
-                        <div class="input-field">
-                            <label for="Email">Email</label>
-                            <input type="email" id="Email" name="Email">
-                        </div>
-                        <div class="input-field">
-                            <label for="Password">Kata Sandi</label>
-                            <input type="text" id="Password" name="Password">
+                        <div class="col s6">
+                            <button type="button" onclick="simpanForm1()" class="btn cyan waves-effect right">
+                                Selanjutnya
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card-action">
-                <div class="row">
-                    <div class="col s6">
-                        Sudah Punya Akun? <a href="login.php" class="btn cyan">Masuk</a>
+            <div id="form2" style="display: none;">
+                <div id="form2" class="card-content">
+                    <span class="card-title"><a role="button"><i class="material-icons">arrow_back</i></a>Kategori Bisnis</span>
+                    <div class="input-field">
+                        <select name="Tipe" id="Tipe">
+                            <option value="none" disabled selected>Pilih Kategori</option>
+                            <option value="Individu">Individu</option>
+                            <option value="Kelompok">Kelompok</option>
+                        </select>
                     </div>
-                    <div class="col s6">
-                        <!--                        <a href="daftar-2.php" class="btn cyan waves-effect right">Selanjutnya</a>-->
-                        <button type="button" onclick="simpanForm1()" class="btn cyan waves-effect right">Selanjutnya
-                        </button>
+                </div>
+                <div class="card-action">
+                    <div class="row">
+                        <div class="col s6">
+                        </div>
+                        <div class="col s6">
+                            <button type="button" onclick="simpanForm2()" class="btn cyan waves-effect right">Daftar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </form>
+            <div id="form3" style="display: none;">
+                <div class="card-content">
+                    <span class="card-title"><a role="button"><i class="material-icons">keyboard_arrow_left</i></a>Daftarkan Pegawai Anda</span>
+                    <div class="row">
+                        <div class="col s4">
+                            <h5>Pengelola Transaksi</h5>
+                            <div class="input-field">
+                                <label for="Nama1">Nama</label>
+                                <input type="text" id="Nama1" name="Nama1">
+                            </div>
+                            <div class="input-field">
+                                <label for="Alamat1">Alamat</label>
+                                <input type="text" id="Alamat1" name="Alamat1">
+                            </div>
+                            <div class="input-field">
+                                <label for="TempatLahir1">Tempat Lahir</label>
+                                <input type="text" id="TempatLahir1" name="TempatLahir1">
+                            </div>
+                            <div class="input-field">
+                                <label for="TanggalLahir1" class="active">Tanggal Lahir</label>
+                                <input type="date" id="TanggalLahir1" name="TanggalLahir1">
+                            </div>
+                            <div class="input-field">
+                                <label for="Email1">Email</label>
+                                <input type="email" id="Email1" name="Email1">
+                            </div>
+                            <div class="input-field">
+                                <label for="Password1">Kata Sandi</label>
+                                <input type="text" id="Password1" name="Password1">
+                            </div>
+                        </div>
+                        <div class="col s4">
+                            <h5>Pengelola Gudang</h5>
+                            <div class="input-field">
+                                <label for="Nama2">Nama</label>
+                                <input type="text" id="Nama2" name="Nama2">
+                            </div>
+                            <div class="input-field">
+                                <label for="Alamat2">Alamat</label>
+                                <input type="text" id="Alamat2" name="Alamat2">
+                            </div>
+                            <div class="input-field">
+                                <label for="TempatLahir2">Tempat Lahir</label>
+                                <input type="text" id="TempatLahir2" name="TempatLahir2">
+                            </div>
+                            <div class="input-field">
+                                <label for="TanggalLahir2" class="active">Tanggal Lahir</label>
+                                <input type="date" id="TanggalLahir2" name="TanggalLahir2">
+                            </div>
+                            <div class="input-field">
+                                <label for="Email2">Email</label>
+                                <input type="email" id="Email2" name="Email2">
+                            </div>
+                            <div class="input-field">
+                                <label for="Password2">Kata Sandi</label>
+                                <input type="text" id="Password2" name="Password2">
+                            </div>
+                        </div>
+                        <div class="col s4">
+                            <h5>Pengelola Keuangan</h5>
+                            <div class="input-field">
+                                <label for="Nama3">Nama</label>
+                                <input type="text" id="Nama3" name="Nama3">
+                            </div>
+                            <div class="input-field">
+                                <label for="Alamat3">Alamat</label>
+                                <input type="text" id="Alamat3" name="Alamat3">
+                            </div>
+                            <div class="input-field">
+                                <label for="TempatLahir3">Tempat Lahir</label>
+                                <input type="text" id="TempatLahir3" name="TempatLahir3">
+                            </div>
+                            <div class="input-field">
+                                <label for="TanggalLahir3" class="active">Tanggal Lahir</label>
+                                <input type="date" id="TanggalLahir3" name="TanggalLahir3">
+                            </div>
+                            <div class="input-field">
+                                <label for="Email3">Email</label>
+                                <input type="email" id="Email3" name="Email3">
+                            </div>
+                            <div class="input-field">
+                                <label for="Password3">Kata Sandi</label>
+                                <input type="text" id="Password3" name="Password3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div class="row">
+                        <div class="col s6">
+                        </div>
+                        <div class="col s6">
+                            <button type="button" onclick="simpanForm3()" class="btn cyan waves-effect right">
+                                Selanjutnya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                ;
+            </div>
+        </div>
     </div>
 </div>
 
@@ -92,6 +215,11 @@
 <script type="text/javascript" src="assets/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script>
 <script type="text/javascript">
+    $(document).ready(function () {
+        var elem = document.querySelector('select');
+        var opt;
+        var instance = new M.Select(elem, opt);
+    });
     var ceknama = false;
     var NamaUsaha = "";
     var AlamatUsaha = "";
@@ -102,177 +230,6 @@
     var Email = "";
     var Password = "";
     var Tipe = "";
-
-    var form1 = "<div class='card-content'>\n" +
-        "                <span class='card-title'>Daftarfkan Bisnis Anda</span>\n" +
-        "                <div class='row'>\n" +
-        "                    <div class='col m6 s12'>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='NamaUsaha' id='labelnamausaha'>Nama Usaha</label>\n" +
-        "                            <input type='text' id='NamaUsaha' name='NamaUsaha' onchange='cekNamaBisnis(this.value)'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='AlamatUsaha'>Alamat</label>\n" +
-        "                            <input type='text' id='AlamatUsaha' name='AlamatUsaha'>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                    <div class='col m6 s12'>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='NamaPemilik'>Nama Pemilik</label>\n" +
-        "                            <input type='text' id='NamaPemilik' name='NamaPemilik'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='AlamatPemilik'>Alamat Pemilik</label>\n" +
-        "                            <input type='text' id='AlamatPemilik' name='AlamatPemilik'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='TempatLahir'>Tempat Lahir</label>\n" +
-        "                            <input type='text' id='TempatLahir' name='TempatLahir'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='TanggalLahir' class='active'>Tanggal Lahir</label>\n" +
-        "                            <input type='date' id='TanggalLahir' name='TanggalLahir'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Email'>Email</label>\n" +
-        "                            <input type='email' id='Email' name='Email'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Password'>Kata Sandi</label>\n" +
-        "                            <input type='text' id='Password' name='Password'>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>" +
-        "            <div class='card-action'>\n" +
-        "                <div class='row'>\n" +
-        "                    <div class='col s6'>\n" +
-        "                        Sudah Punya Akun? <a href='login.php' class='btn cyan'>Masuk</a>\n" +
-        "                    </div>\n" +
-        "                    <div class='col s6'>\n" +
-        "                        <!--                        <a href='daftar-2.php' class='btn cyan waves-effect right'>Selanjutnya</a>-->\n" +
-        "                        <button type='button' onclick='simpanForm1()' class='btn cyan waves-effect right'>Selanjutnya\n" +
-        "                        </button>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>";
-
-    var form2 = "<div class='card-content'>\n" +
-        "                <span class='card-title'><a role='button' id='form1'><i class='material-icons'>arrow_back</i></a>Kategori Bisnis</span>\n" +
-        "                <div class='input-field'>\n" +
-        "                    <select name='Tipe' id='Tipe'>\n" +
-        "                        <option value='none' disabled selected>Pilih Kategori</option>\n" +
-        "                        <option value='Individu'>Individu</option>\n" +
-        "                        <option value='Kelompok'>Kelompok</option>\n" +
-        "                    </select>\n" +
-        "                </div>\n" +
-        "            </div>\n" +
-        "            <div class='card-action'>\n" +
-        "                <div class='row'>\n" +
-        "                    <div class='col s6'>\n" +
-        "\n" +
-        "                    </div>\n" +
-        "                    <div class='col s6'>\n" +
-        "                        <button type='button' onclick='simpanForm2()' class='btn cyan waves-effect right'>Daftar</button>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>";
-
-    var form3 = "<div class='card-content'>\n" +
-        "                <span class='card-title'><a role='button'><i class='material-icons'>keyboard_arrow_left</i></a>Daftarkan Pegawai Anda</span>\n" +
-        "                <div class='row'>\n" +
-        "                    <div class='col s4'>\n" +
-        "                        <h5>Pengelola Transaksi</h5>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Nama1'>Nama</label>\n" +
-        "                            <input type='text' id='Nama1' name='Nama1'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Alamat1'>Alamat</label>\n" +
-        "                            <input type='text' id='Alamat1' name='Alamat1'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='TempatLahir1'>Tempat Lahir</label>\n" +
-        "                            <input type='text' id='TempatLahir1' name='TempatLahir1'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='TanggalLahir1' class='active'>Tanggal Lahir</label>\n" +
-        "                            <input type='date' id='TanggalLahir1' name='TanggalLahir1'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Email1'>Email</label>\n" +
-        "                            <input type='email' id='Email1' name='Email1'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Password1'>Kata Sandi</label>\n" +
-        "                            <input type='text' id='Password1' name='Password1'>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                    <div class='col s4'>\n" +
-        "                        <h5>Pengelola Gudang</h5>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Nama2'>Nama</label>\n" +
-        "                            <input type='text' id='Nama2' name='Nama2'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Alamat2'>Alamat</label>\n" +
-        "                            <input type='text' id='Alamat2' name='Alamat2'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='TempatLahir2'>Tempat Lahir</label>\n" +
-        "                            <input type='text' id='TempatLahir2' name='TempatLahir2'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='TanggalLahir2' class='active'>Tanggal Lahir</label>\n" +
-        "                            <input type='date' id='TanggalLahir2' name='TanggalLahir2'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Email2'>Email</label>\n" +
-        "                            <input type='email' id='Email2' name='Email2'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Password2'>Kata Sandi</label>\n" +
-        "                            <input type='text' id='Password2' name='Password2'>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                    <div class='col s4'>\n" +
-        "                        <h5>Pengelola Keuangan</h5>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Nama3'>Nama</label>\n" +
-        "                            <input type='text' id='Nama3' name='Nama3'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Alamat3'>Alamat</label>\n" +
-        "                            <input type='text' id='Alamat3' name='Alamat3'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='TempatLahir3'>Tempat Lahir</label>\n" +
-        "                            <input type='text' id='TempatLahir3' name='TempatLahir3'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='TanggalLahir3' class='active'>Tanggal Lahir</label>\n" +
-        "                            <input type='date' id='TanggalLahir3' name='TanggalLahir3'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Email3'>Email</label>\n" +
-        "                            <input type='email' id='Email3' name='Email3'>\n" +
-        "                        </div>\n" +
-        "                        <div class='input-field'>\n" +
-        "                            <label for='Password3'>Kata Sandi</label>\n" +
-        "                            <input type='text' id='Password3' name='Password3'>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>\n" +
-        "            <div class='card-action'>\n" +
-        "                <div class='row'>\n" +
-        "                    <div class='col s6'>\n" +
-        "                    </div>\n" +
-        "                    <div class='col s6'>\n" +
-        "                        <button type='button' onclick='simpanForm3()' class='btn cyan waves-effect right'>Selanjutnya</button>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>";
 
     function cekNamaBisnis(e) {
         if (e == '') {
@@ -309,8 +266,8 @@
         Email = $("#Email").val();
         Password = $("#Password").val();
         if (ceknama) {
-            $("#card").empty();
-            $("#card").html(form2);
+            $("#form1").css("display", "none");
+            $("#form2").css("display", "block");
         } else {
 
         }
@@ -341,9 +298,13 @@
             }).fail(function () {
 
             });
+        } else if (Tipe == 'Kelompok') {
+            $("#form2").css("display", "none");
+            $("#form3").css("display", "block");
+            $("#card-main").removeClass("m6 s12 offset-m3");
+            $("#card-main").addClass("m10 s12");
         } else {
-            $("#card").empty();
-            $("#card").html(form3);
+
         }
     }
 
@@ -415,6 +376,13 @@
         });
     }
 
+    function keForm1() {
+
+    }
+
+    function keForm2() {
+
+    }
 
 </script>
 </body>
