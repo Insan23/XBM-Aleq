@@ -37,21 +37,25 @@ class ControlPengguna
                 $_SESSION['nama'] = "Admin";
             } else if ($hasil['Tingkatan'] == 'Pemilik') {
                 $_SESSION['IDUsaha'] = $hasil['IDUsaha'];
+                $_SESSION['NamaUsaha'] = $hasil['NamaUsaha'];
                 $_SESSION['IDPegawai'] = $hasil['IDPegawai'];
                 $_SESSION['Nama'] = $hasil['Nama'];
                 header("location: index.php?c=ControlHalaman&f=pemilik_beranda");
             } else if ($hasil['Tingkatan'] == 'Pengelola Transaksi') {
                 $_SESSION['IDUsaha'] = $hasil['IDUsaha'];
+                $_SESSION['NamaUsaha'] = $hasil['NamaUsaha'];
                 $_SESSION['IDPegawai'] = $hasil['IDPegawai'];
                 $_SESSION['Nama'] = $hasil['Nama'];
                 header("location: index.php?c=ControlHalaman&f=transaksi_beranda");
             } else if ($hasil['Tingkatan'] == 'Pengelola Gudang') {
                 $_SESSION['IDUsaha'] = $hasil['IDUsaha'];
+                $_SESSION['NamaUsaha'] = $hasil['NamaUsaha'];
                 $_SESSION['IDPegawai'] = $hasil['IDPegawai'];
                 $_SESSION['Nama'] = $hasil['Nama'];
                 header("location: index.php?c=ControlHalaman&f=gudang_beranda");
             } else if ($hasil['Tingkatan'] == 'Pengelola Keuangan') {
                 $_SESSION['IDUsaha'] = $hasil['IDUsaha'];
+                $_SESSION['NamaUsaha'] = $hasil['NamaUsaha'];
                 $_SESSION['IDPegawai'] = $hasil['IDPegawai'];
                 $_SESSION['Nama'] = $hasil['Nama'];
                 header("location: index.php?c=ControlHalaman&f=keuangan_beranda");

@@ -13,7 +13,7 @@
 <header>
     <nav>
         <div class="nav-wrapper indigo">
-            <a href="#" class="brand-logo">Nama Usaha</a>
+            <a href="#" class="brand-logo"><?php echo $_SESSION['NamaUsaha']; ?></a>
             <a data-target="sidebar" class="sidenav-trigger"><i class="material-icons sidenav-trigger-alt">menu</i></a>
             <ul id="nav-right" class="right hide-on-med-and-down">
 
@@ -21,11 +21,11 @@
         </div>
     </nav>
     <ul id="MenuUser" class="dropdown-content">
-        <li><a href="">Profil Saya</a></li>
-        <li><a href="">Profil Bisnis</a></li>
-        <li><a href="">Tentang Usaha</a></li>
+        <li><a href="index.php?c=ControlHalaman&f=profil">Profil Saya</a></li>
+        <li><a href="index.php?c=ControlHalaman&f=profil_bisnis">Profil Bisnis</a></li>
+        <li><a href="index.php?c=ControlHalaman&f=tentang_usaha">Tentang Usaha</a></li>
         <li class="divider"></li>
-        <li><a href="">Tentang XBM</a></li>
+        <li><a href="index.php?c=ControlHalaman&f=tentang_xbm">Tentang XBM</a></li>
         <li><a href="">Keluar</a></li>
     </ul>
 </header>
@@ -45,12 +45,27 @@
         <li class="hide-on-med-and-up"><a href="">Tentang Usaha</a></li>
         <li class="divider hide-on-med-and-up"></li>
         <li class="hide-on-med-and-up"><a href="">Tentang XBM</a></li>
-        <li class="hide-on-med-and-up"><a href="">Keluar</a></li>
+        <li class="hide-on-med-and-up"><a href="#logout" class="modal-trigger">Keluar</a></li>
     </ul>
 </aside>
 
 <div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large indigo">
+            <a class="modal-trigger" href="#tambah"><i class="large material-icons">add</i></a>
+        </a>
+    </div>
+</div>
 
+<!-- modal -->
+<div id="logout" class="modal">
+    <div class="modal-content">
+        <h4>Yakin Logout?</h4>
+    </div>
+    <div class="modal-footer">
+        <a href="logout.php" class="waves-effect waves-green btn-flat">Tidak</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ya</a>
+    </div>
 </div>
 
 <footer></footer>
@@ -60,9 +75,15 @@
     $(document).ready(function () {
 
     });
-    var elem = document.querySelector('.sidenav');
     var option;
-    var instance = new M.Sidenav(elem, option);
+    var instance = new M.Sidenav(
+        document.querySelector('.sidenav'),
+        option
+    );
+    var instance = new M.Modal(
+        document.querySelector('.modal'),
+        option
+    );
 </script>
 
 </body>

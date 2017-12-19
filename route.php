@@ -19,6 +19,10 @@ function call($controller, $action)
             $controller = new ControlGudang();
             break;
         case 'ControlHalaman':
+            require_once('main/model/Gudang.php');
+            require_once('main/model/Keuangan.php');
+            require_once('main/model/Pengguna.php');
+            require_once('main/model/Transaksi.php');
             $controller = new ControlHalaman();
             break;
         case 'ControlKeuangan':
